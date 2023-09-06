@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <style>
+            p{
+                position:absolute;
+                top:50%;
+                left:50%;
+                transform:translate(-50%,-50%);
+            }
+            body{
+                background-color: lightblue;
+            }
+        </style>
+    </head>
+    <body>
+        <p id="myp1"></p>
+    </body>
+    <script>
+        textsize = 5;
+        var mywait = setInterval(GrowText, 100);
+        function GrowText() {
+            if (textsize<50){
+                textsize = textsize + 1;
+                document.getElementById("myp1").innerHTML="SVCE";
+                document.getElementById("myp1").style.color ="red";
+                document.getElementById("myp1").style.fontSize=(textsize + "pt");
+            } else {
+                clearInterval(mywait);
+                mywait=setInterval(ShrinkText,100);
+            }
+        }
+        function ShrinkText() {
+            if (textsize>5){
+                textsize = textsize - 1;
+                document.getElementById("myp1").innerHTML="SVCE";
+                document.getElementById("myp1").style.color ="blue";
+                document.getElementById("myp1").style.fontSize=(textsize + "pt");
+            } else {
+                clearInterval(mywait);
+            }
+        }
+    </script>
+</html>

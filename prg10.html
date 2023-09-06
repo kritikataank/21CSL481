@@ -1,0 +1,21 @@
+<html>
+    <center>
+        <h3 style="color:green">Listing of Flims</h3>
+        <script>
+            var serieslist =["Rush Hour ","Mission Impossible ","X Men "];
+            document.write("<br>Initially elements in array: <br><br> "+serieslist+" <br>");
+            function addObject(){
+                var movie = document.getElementById("mv").value;
+                serieslist.push(movie);
+                document.getElementById("result").innerHTML="<br> Array after adding new elements: <br><br> " +serieslist;
+            }
+        </script>
+        <body>
+            <p>Enter the movie name and click the button to add it to the list</p>
+            <b>Enter movie name: </b>
+            <input type="text" id="mv">
+            <button type="submit" onclick="addObject()">Add Movie</button>
+            <h4 id="result"></h4>
+        </body>
+    </center>
+</html>

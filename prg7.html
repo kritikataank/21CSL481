@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <body>
+        <h3>Using the <i>onclick event attribute</i> to invoke the particular function whenever the user checks and unchecks checkbox</h3>
+        <label for="fruits">Fruits</label>
+        <input type="checkbox" id="fruit" onclick="Showfruits()">
+        <label for="vegetables">Vegetables</label>
+        <input type="checkbox" id="vegetables" onclick="ShowVegetables()"><br><br>
+        <div id="Vegetables-div">
+            <ul>
+                <li>Cabbage</li>
+                <li>Celery</li>
+                <li>Carrot</li>
+                <li>Onion</li>
+                <li>Tomato</li>
+                <li>Potato</li>
+            </ul>
+        </div>
+        <div id="fruits-div">
+            <ul>
+                <li>Apple</li>
+                <li>Banana</li>
+                <li>Guava</li>
+                <li>Grapes</li>
+                <li>Watermelon</li>
+                <li>Strawberry</li>
+            </ul>
+        </div>
+        <script>
+            function Showfruits(){
+                var fruit=document.getElementById("fruit");
+                var fruit_div = document.getElementById('fruits-div');
+                if (fruit.checked){
+                    fruit_div.style.display="flex";
+                } else {
+                    fruit_div.style.display="none";
+                }
+            }
+            function ShowVegetables(){
+                var fruit=document.getElementById("vegetables");
+                var fruit_div = document.getElementById('Vegetables-div');
+                if (fruit.checked){
+                    fruit_div.style.display="flex";
+                } else {
+                    fruit_div.style.display="none";
+                }
+            }
+        </script>
+    </body>
+</html>
